@@ -1,0 +1,21 @@
+header 
+{
+background-color: #2eacd1;
+}
+
+#camera, #geo, #native1, #native2, #native3
+{
+margin-left: 20%;
+margin-top: 50px;
+}
+
+span
+{
+font-size: 20px;
+padding-left: 25px;
+}
+
+h1
+{
+margin-top: 50px;
+}
