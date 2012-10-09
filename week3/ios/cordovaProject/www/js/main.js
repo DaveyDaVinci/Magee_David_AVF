@@ -176,6 +176,7 @@ function onSuccess(heading) {
     element.innerHTML = 'Heading: ' + heading;
 }
 
+
 //Fail
 function onError() {
     alert('onError!');
@@ -226,24 +227,27 @@ function deviceInfo() {
 }
 
 $(function() { 
-	$.getJSON("http://search.twitter.com/search.json?q=sci%20fi&rpp=10&include_entities=true$result_type=recent&callback=?",
+	$.getJSON("http://search.twitter.com/search.json?q=sci%20fi&rpp=10&include_entities=true&result_type=recent&callback=?",
 		function(data) {
+		alert("hi");
 		$("twitterfeed").html("<p>Info Fetched</p>");
-		for (i=0, j=data.results.length; I<j; i++) {
+		for (i=0, j=data.results.length; i<j; i++) {
 			$("twitter").append("<img src='" + data.results[i].profile_image_url + "' />");
 		}	
 	});
 });
 
 
+/*
+
 $('#jsondata').on('click', function(){
 			
 			$.ajax({
-				url: 'http://search.twitter.com/search.json?q=sci%20fi&rpp=10&include_entities=true$result_type=recent&callback=?',
+				url: 'http://search.twitter.com/search.json?q=sci%20fi&rpp=10&include_entities=true&result_type=recent&callback=?',
 				type: 'GET',
 				dataType: 'json',
 				success: function(data){
-					for (var i=0, j=data.results.length; I<j; i++){
+					for (var i=0, j=data.results.length; i<j; i++){
 						$(
 							'<li>'+ "<img src='" + data.results[i].profile_image_url + "' />"
 								 +
@@ -255,6 +259,8 @@ $('#jsondata').on('click', function(){
 			});
 			return false;
 	});
+	
+	*/
 
 
 
