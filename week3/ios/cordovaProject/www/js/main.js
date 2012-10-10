@@ -226,13 +226,17 @@ function deviceInfo() {
                             'Device Version: '  + device.version  + '<br />';
 }
 
+
+
+
+//Twitter feed
+
 $(function() { 
 	$.getJSON("http://search.twitter.com/search.json?q=sci%20fi&rpp=10&include_entities=true&result_type=recent&callback=?",
 		function(data) {
-		alert("hi");
-		$("twitterfeed").html("<p>Info Fetched</p>");
+		$("#twitterfeed").html("<p>Info Fetched</p>");
 		for (i=0, j=data.results.length; i<j; i++) {
-			$("twitter").append("<img src='" + data.results[i].profile_image_url + "' />");
+			$("#twitter").append("<img src='" + data.results[i].profile_image_url + "' />" + "<p>" + data.results[i].from_user + "</p>" + "<p>" + data.results[i].text + "</p>" + "<br />");
 		}	
 	});
 });
