@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- David Magee, AVF 1012 -->
+<html>
+	<head>
+    	<meta charset="utf-8" />
+    	<meta name="description" content="First document." />
+    	<meta name="keywords" content="mobile development" />
+    	<meta name="robots" content="index, follow" />
+    	<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    	<meta http-equiv="cleartype" content="on">
+    	<title> Sci-Fi Your Mates </title>
+    	<link rel="stylesheet" href="css/style.css" />
+    	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    	
+	</head>
+	<body id="indexbody" onload="onNetLoad()">
+		<header>
+			<center><img src="img/headlinePic.png" alt="Sci-Fi Your Mates" height="100" width="300" /></center>
+		</header>
+		<div>
+			<center><a href="photopage.html" rel="external"><img src="img/camerabutton.png" id="camera" alt="" height="55" width="324"/></a></center>
+		</div>
+		<div>
+			<center><a href="geopage.html" rel="external"><img id="geo" src="img/geobutton.png" height="55" width="324"/></a></center>
+			
+		</div>
+		<div>
+			<center><input type="image" id="network" src="img/networkbutton.png" name="Network" height="55" width="324" onclick="checkConnection()"></center>
+			<p id="connectionText" display="none"></p>
+		</div>
+		<div>
+			<center><input type="image" id="device" src="img/phonebutton.png" name="Device" height="55" width="324" onclick="deviceInfo()"></center>
+			<p id="deviceProperties" display="none"></p>
+		</div>
+		<div>
+			<center><a href="twitterapi.html" rel="external"><img src="img/twitterbutton.png" id="camera" alt="" height="55" width="324"/></a></center>
+		</div>
+		<div>
+			<center><a href="tumblrpage.html" rel="external"><img src="img/etsybutton.png" id="camera" alt="" height="55" width="324"/></a></center>
+		</div>
+		
+		
+		<div>
+			<center><video id="movie" width="320" height="240" preload controls>
+  				<source src="vid/Animation.theora.mp4" type="video/mp4; 
+  					codecs='avc1.42E01E, mp4a.40.2'"/>
+  				<source src="vid/Animation.webm" type="video/webm; codecs=vp8, vorbis" />
+  				<source src="vid/Animation.theora.ogv" type="video/ogg; codecs=theora, vorbis" />
+ 				
+			</video></center>
+		</div>
+		<p id="geolocation"></p>
+		
+		
+	
+		
+		
+	
+	
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="cordova-2.1.0.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+	</body>
+</html> 
